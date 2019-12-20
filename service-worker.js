@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Cumplo-Test/precache-manifest.78040d891c42875c82a2d291541832f4.js"
+  "/Cumplo-Test/precache-manifest.280d2f3c0fb1681b3c2f38d427a62212.js"
 );
 
 self.addEventListener('message', (event) => {

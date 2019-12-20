@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Cumplo-Test/static/css/main.d1b05096.chunk.css",
-    "main.js": "/Cumplo-Test/static/js/main.dd94a481.chunk.js",
-    "main.js.map": "/Cumplo-Test/static/js/main.dd94a481.chunk.js.map",
+    "main.js": "/Cumplo-Test/static/js/main.04113b38.chunk.js",
+    "main.js.map": "/Cumplo-Test/static/js/main.04113b38.chunk.js.map",
     "runtime-main.js": "/Cumplo-Test/static/js/runtime-main.8d33c289.js",
     "runtime-main.js.map": "/Cumplo-Test/static/js/runtime-main.8d33c289.js.map",
-    "static/js/2.d65a0115.chunk.js": "/Cumplo-Test/static/js/2.d65a0115.chunk.js",
-    "static/js/2.d65a0115.chunk.js.map": "/Cumplo-Test/static/js/2.d65a0115.chunk.js.map",
+    "static/js/2.ba5e205f.chunk.js": "/Cumplo-Test/static/js/2.ba5e205f.chunk.js",
+    "static/js/2.ba5e205f.chunk.js.map": "/Cumplo-Test/static/js/2.ba5e205f.chunk.js.map",
     "index.html": "/Cumplo-Test/index.html",
-    "precache-manifest.78040d891c42875c82a2d291541832f4.js": "/Cumplo-Test/precache-manifest.78040d891c42875c82a2d291541832f4.js",
+    "precache-manifest.280d2f3c0fb1681b3c2f38d427a62212.js": "/Cumplo-Test/precache-manifest.280d2f3c0fb1681b3c2f38d427a62212.js",
     "service-worker.js": "/Cumplo-Test/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/Cumplo-Test/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.d65a0115.chunk.js.LICENSE": "/Cumplo-Test/static/js/2.d65a0115.chunk.js.LICENSE"
+    "static/js/2.ba5e205f.chunk.js.LICENSE": "/Cumplo-Test/static/js/2.ba5e205f.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.8d33c289.js",
-    "static/js/2.d65a0115.chunk.js",
+    "static/js/2.ba5e205f.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.dd94a481.chunk.js"
+    "static/js/main.04113b38.chunk.js"
   ]
 }
