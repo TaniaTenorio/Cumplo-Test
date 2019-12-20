@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "89cb9da4ae297e54f8a8a4ea60f4d5b9",
+    "revision": "95aef6d6a9c0049f2996fa6b150ffe8c",
     "url": "/Cumplo-Test/index.html"
   },
   {
-    "revision": "388dd6903892360c02cd",
+    "revision": "326666263a4d6c3916ca",
     "url": "/Cumplo-Test/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cumplo-Test/static/js/2.d65a0115.chunk.js.LICENSE"
   },
   {
-    "revision": "388dd6903892360c02cd",
-    "url": "/Cumplo-Test/static/js/main.12956fc1.chunk.js"
+    "revision": "326666263a4d6c3916ca",
+    "url": "/Cumplo-Test/static/js/main.dd94a481.chunk.js"
   },
   {
     "revision": "750f2a0bad04959a12fe",

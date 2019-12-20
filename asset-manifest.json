@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Cumplo-Test/static/css/main.d1b05096.chunk.css",
-    "main.js": "/Cumplo-Test/static/js/main.12956fc1.chunk.js",
-    "main.js.map": "/Cumplo-Test/static/js/main.12956fc1.chunk.js.map",
+    "main.js": "/Cumplo-Test/static/js/main.dd94a481.chunk.js",
+    "main.js.map": "/Cumplo-Test/static/js/main.dd94a481.chunk.js.map",
     "runtime-main.js": "/Cumplo-Test/static/js/runtime-main.8d33c289.js",
     "runtime-main.js.map": "/Cumplo-Test/static/js/runtime-main.8d33c289.js.map",
     "static/js/2.d65a0115.chunk.js": "/Cumplo-Test/static/js/2.d65a0115.chunk.js",
     "static/js/2.d65a0115.chunk.js.map": "/Cumplo-Test/static/js/2.d65a0115.chunk.js.map",
     "index.html": "/Cumplo-Test/index.html",
-    "precache-manifest.28a12a417dd1182a18271232e1cad610.js": "/Cumplo-Test/precache-manifest.28a12a417dd1182a18271232e1cad610.js",
+    "precache-manifest.78040d891c42875c82a2d291541832f4.js": "/Cumplo-Test/precache-manifest.78040d891c42875c82a2d291541832f4.js",
     "service-worker.js": "/Cumplo-Test/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/Cumplo-Test/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.d65a0115.chunk.js.LICENSE": "/Cumplo-Test/static/js/2.d65a0115.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8d33c289.js",
     "static/js/2.d65a0115.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.12956fc1.chunk.js"
+    "static/js/main.dd94a481.chunk.js"
   ]
 }
