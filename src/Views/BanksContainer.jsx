@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Header from '../Components/Header';
 import Banks from '../Components/Banks';
 
 export default class BanksContainer extends Component {
@@ -24,7 +25,12 @@ export default class BanksContainer extends Component {
         //const bankName = this.state.banks[0].name;
         // console.log(bankName);
         return (
-            this.state.banks.map(((bank) => <Banks name={bank.name} key={bank.pk}/>))
+            <div>
+                <Header />
+                <div className="bank-card-container">
+                    {this.state.banks.map(((bank) => <Banks name={bank.name} key={bank.pk}/>))}
+                </div>
+            </div>
         )    
 }
 }

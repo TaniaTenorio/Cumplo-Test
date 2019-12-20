@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
+import Header from '../Components/Header';
 import Branches from '../Components/Branches'
 
 export default class BranchesContainer extends Component {
@@ -7,7 +8,8 @@ export default class BranchesContainer extends Component {
         super(props)
         this.state = {
             branches: [],
-            path: []
+            path: [],
+            isFetched: true,
         }
     }
 
@@ -18,12 +20,16 @@ export default class BranchesContainer extends Component {
     }
     render() {
         console.log(this.state)
-        if(this.state.isFetched) {
-            return 'Loading...'
-        }
+        // if(this.state.isFetched) {
+        //     return 'Loading...'
+        // }
         return(
-            this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank}/>))
-            //<Branches name="branch" />
+            <Fragment>
+                <Header />
+                <div className="branch-card-container">
+                    {this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank}/>))}
+                </div>
+            </Fragment>
         )
         }
     }

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Banks(props) {
     return(
-        <div>
-            <h1>Bank: {props.name}</h1>
+        <div className="bank-card">
+            <h1>Bank: </h1>
+            <p>{props.name}</p>
             <Link to="/branches">Info</Link>
         </div>
     )

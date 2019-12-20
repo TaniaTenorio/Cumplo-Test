@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Branches(props) {
     return(
-        <div>
+        <div className="branch-card">
             <h1>Branch:</h1>
             <p>{props.name}</p>
             <p>Bank: {props.bank}</p>
