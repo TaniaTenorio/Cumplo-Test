@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
+import Branches from '../Components/Branches'
+
 export default class BranchesContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            branches: []
+            branches: [],
+            path: []
         }
     }
 
@@ -14,10 +17,13 @@ export default class BranchesContainer extends Component {
             .then(branchesJson => this.setState({branches: branchesJson.results}))
     }
     render() {
+        console.log(this.state)
+        if(this.state.isFetched) {
+            return 'Loading...'
+        }
         return(
-            <div>
-                <h1>Branches</h1>
-            </div>
+            this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank}/>))
+            //<Branches name="branch" />
         )
         }
     }

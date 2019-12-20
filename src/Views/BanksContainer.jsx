@@ -24,8 +24,7 @@ export default class BanksContainer extends Component {
         //const bankName = this.state.banks[0].name;
         // console.log(bankName);
         return (
-            this.state.banks.map((bank => <Banks name={bank.name} key={bank.pk}/>))
-            // <Banks name={bankName} />
-        )
-    }
+            this.state.banks.map(((bank) => <Banks name={bank.name} key={bank.pk}/>))
+        )    
+}
 }
