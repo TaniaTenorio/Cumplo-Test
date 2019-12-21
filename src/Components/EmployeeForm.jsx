@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 
 
 const validate = values => {
+    const regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/g;
     const errors = {};
     console.log(values);
     if(!values.name){
         errors.name = 'This field is required'
+    } else if (!regex.test(values.name)){
+        errors.name = 'Special characters not accepted. Only accents and spaces'
     }
     if(!values.lastName){
         errors.lastName = 'This field is required'
+    } else if (!regex.test(values.lastName)){
+        errors.lastName = 'Special characters not accepted. Only accents and spaces'
     }
     if(!values.branch){
         errors.branch = 'This field is required'
-    }
+    } 
+    // else if (!regex.test(values.branch)){
+    //     errors.branch = 'Special characters not accepted. Only accents and spaces'
+    // }
     return errors;
 }
 export default class EmployeeForm extends Component {
