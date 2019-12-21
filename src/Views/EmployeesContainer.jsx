@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 
-import Header from '../Components/Header';
 import Employees from '../Components/Employees';
 import EmployeeForm from '../Components/EmployeeForm';
 
@@ -16,6 +15,18 @@ export default class EmployeesContainer extends Component {
         fetch("https://tryouts-cumplo.herokuapp.com/employees/")
             .then(response => response.json())
             .then(employeesJson => this.setState({employees: employeesJson.results}))
+            
+            // .then(data => {
+            //     const employeesJson = data.results
+            //     console.log(employeesJson)
+            //     employeesJson.forEach(employee => {
+            //         console.log(Array.from(employee))
+            //         // if(employee.branch === 3){
+            //         //     this.setState({employees: employee})
+            //         // }
+            //     })
+            // console.log(this.state)
+            // })
     };
     
     render() {
@@ -26,8 +37,12 @@ export default class EmployeesContainer extends Component {
 
         return(
             <Fragment>
-                <Header />
-            {this.state.employees.map((employee) => <Employees name={employee.name} middleName={employee.middle_name} lastName={employee.last_name}key={employee.id}/>)}
+            {this.state.employees.map((employee) => {
+                if(employee.branch ===1){
+                return(<Employees name={employee.name} middleName={employee.middle_name} lastName={employee.last_name}key={employee.id}/>)
+                }
+            })
+            }
              <EmployeeForm />
             </Fragment>
         )
