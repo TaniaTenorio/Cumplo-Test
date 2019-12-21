@@ -1,20 +1,35 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 
-class EmployeeForm extends Component {
+
+const validate = values => {
+    const errors = {};
+    console.log(values);
+    if(!values.name){
+        errors.name = 'This field is required'
+    }
+    if(!values.lastName){
+        errors.lastName = 'This field is required'
+    }
+    if(!values.branch){
+        errors.branch = 'This field is required'
+    }
+    return errors;
+}
+export default class EmployeeForm extends Component {
     state = {
-        name: '',
-       number: '',
+        errors: {}
     }
     onSubmit = e => {
         e.preventDefault();
-        localStorage.setItem('clientes', JSON.stringify(this.state));
-        this.props.history.push('/Sidebar');
-        //console.log(JSON.parse(localStorage.getItem('clientes')));
-        //this.props.agregarClientes(this.state.name);
+        const{ errors, ...noErrors } = this.state;
+        const result = validate(noErrors);
+        this.setState({ errors: result })
+        if(!Object.keys(result).length){
+            console.log("Succeed, new employee registered")
+        }
     }
+
     onChange = e => {
-        // console.log(e.target.name);
         this.setState({
             [e.target.name]: e.target.value,
             //[e.target.number]: e.target.value
@@ -22,39 +37,54 @@ class EmployeeForm extends Component {
     }
     render(){
         //console.log(this.props);
-        
+        const { errors } = this.state;
         return(
-            <form onSubmit={this.onSubmit}>
-                    <input
-                        name="name"
-                        type="text"
-                        placeholder="Name"
-                        value={this.state.name} 
-                        onChange={this.onChange}/>  <br />
-                    <input
-                        name="middle-name"
-                        type="text" 
-                        placeholder="Middle Name"
-                        value={this.state.number} 
-                        onChange={this.onChange}/> <br />
-                    <input
-                        name="last-name"
-                        type="text" 
-                        placeholder="Last Name"
-                        value={this.state.number} 
-                        onChange={this.onChange}/> <br />
-                    <input
-                        name="branch"
-                        type="text" 
-                        placeholder="Branch"
-                        value={this.state.number} 
-                        onChange={this.onChange}/>
-                <br />
-                <br />
-                    <button> Registrar </button>
-            </form>
+            <div className="form-container">
+                <h1>Register new employee</h1>
+                <form onSubmit={this.onSubmit}>
+                        <input
+                            className="form-input"
+                            name="name"
+                            type="text"
+                            placeholder="Name"
+                            value={this.state.name} 
+                            onChange={this.onChange}
+                            />  <br />
+                        {errors.name && <p>{errors.name}</p>}
+                        <input
+                            className="form-input"
+                            name="middleName"
+                            type="text" 
+                            placeholder="Middle Name"
+                            value={this.state.middleName} 
+                            onChange={this.onChange}
+                            /> <br />
+                        {errors.middleName && <p>{errors.middleName}</p>}
+                        <input
+                            className="form-input"
+                            name="lastName"
+                            type="text" 
+                            placeholder="Last Name"
+                            value={this.state.lastName} 
+                            onChange={this.onChange}/> <br />
+                        {errors.lastName && <p>{errors.lastName}</p>}
+                        <input
+                            className="form-input"
+                            name="branch"
+                            type="text" 
+                            placeholder="Branch"
+                            value={this.state.branch} 
+                            onChange={this.onChange}
+                            />
+                        {errors.branch && <p>{errors.branch}</p>}
+                    <br />
+                    <br />
+                        <input 
+                        className="form-input"
+                        type="submit" value="Send" />
+                </form>
+            </div>
         )
     }
 }
 
-export default withRouter(EmployeeForm);
