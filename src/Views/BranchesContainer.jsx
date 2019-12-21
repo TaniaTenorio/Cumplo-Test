@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Header from '../Components/Header';
+import SectionTitle from '../Components/SectionTitle';
 import Branches from '../Components/Branches'
 
 export default class BranchesContainer extends Component {
@@ -26,8 +27,9 @@ export default class BranchesContainer extends Component {
         return(
             <Fragment>
                 <Header />
-                <div className="branch-card-container">
-                    {this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank}/>))}
+                <SectionTitle section="My Branches" />
+                <div className="branch-card-container gray-background">
+                    {this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank} href={branch.name} path="/"/>))}
                 </div>
             </Fragment>
         )
