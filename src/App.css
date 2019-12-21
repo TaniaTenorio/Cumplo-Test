@@ -11,11 +11,24 @@
 .align-center {
   text-align: center;
 }
+.gray-background {
+  background-color: #eff2f5;
+}
 .main-title {
   height: 100px;
   padding-top: 40px;
   color: #FFFFFF;
   font-size: 3rem;
+}
+.section-title {
+  height: 80px;
+  background-color: #eff2f5;
+  color: #5fd09b;
+}
+.section-title > h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
 }
 .bank-card-container,
 .branch-card-container {
