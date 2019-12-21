@@ -22,7 +22,7 @@ export default class EmployeesContainer extends Component {
         // if(this.state.isFetched) {
         //     return 'Loading...'
         // }
-        console.log(this.state.employees[0])
+        console.log(this.state.employees)
 
         return(
             <Fragment>
