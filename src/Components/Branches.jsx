@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 function Branches(props) {
     return(
         <div className="branch-card">
-            <h1>Branch:</h1>
-            <p>{props.name}</p>
+            <h1>{props.name}</h1>
             <p>Bank: {props.bank}</p>
-            <Link to="/employees">Employees</Link>
+            <Link to={props.href}>Employees</Link>
         </div>
     )
 }
