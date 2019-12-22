@@ -70,3 +70,21 @@
   margin: 10px;
   border-radius: 5px;
 }
+.employees-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 40px;
+}
+.employees-container > h3 {
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+.employees-container > button {
+  height: 80%;
+  margin-top: 4px;
+  background-color: #00ba68;
+  color: #FFFFFF;
+  border: solid #00ba68;
+  border-radius: 3px;
+}
