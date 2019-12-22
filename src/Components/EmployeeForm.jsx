@@ -12,8 +12,8 @@ const validate = values => {
     }
     if(!values.lastName){
         errors.lastName = 'This field is required'
-    } else if (!regex.test(values.lastName)){
-        errors.lastName = 'Special characters not accepted. Only accents and spaces'
+    // } else if (!regex.test(values.lastName)){
+    //     errors.lastName = 'Special characters not accepted. Only accents and spaces'
     }
     if(!values.branch){
         errors.branch = 'This field is required'
@@ -23,10 +23,15 @@ const validate = values => {
     // }
     return errors;
 }
+
 export default class EmployeeForm extends Component {
     state = {
         errors: {}
     }
+    // async postData() {
+    //     try 
+    // }
+
     onSubmit = e => {
         e.preventDefault();
         const{ errors, ...noErrors } = this.state;
@@ -35,6 +40,7 @@ export default class EmployeeForm extends Component {
         if(!Object.keys(result).length){
             console.log("Succeed, new employee registered")
         }
+
     }
 
     onChange = e => {
@@ -89,7 +95,9 @@ export default class EmployeeForm extends Component {
                     <br />
                         <input 
                         className="form-input"
-                        type="submit" value="Send" />
+                        type="submit"
+
+                        value="Send" />
                 </form>
             </div>
         )
