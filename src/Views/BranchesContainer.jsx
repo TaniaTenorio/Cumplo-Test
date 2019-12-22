@@ -29,7 +29,7 @@ export default class BranchesContainer extends Component {
                 <Header />
                 <SectionTitle section="My Branches" />
                 <div className="branch-card-container gray-background">
-                    {this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank} href={branch.name} path="/"/>))}
+                    {this.state.branches.map((branch => <Branches name={branch.name} key={branch.id} bank={branch.bank} href={branch.name}/>))}
                 </div>
             </Fragment>
         )
